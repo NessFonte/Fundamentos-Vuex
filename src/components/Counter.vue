@@ -9,14 +9,17 @@
     <h1>mapState</h1>
     <h2>mapState: {{ count }}</h2>
     <h2>mapState: {{ lastMutation }}</h2>
+
+    <h2>Direct getter: {{ squareCount }}</h2>
 </template>
 
 <script>
-import { mapState, mapActions } from "vuex"
+import { mapState, mapActions, mapGetters } from "vuex"
 
 export default {
     computed: {
-        ...mapState(['count', 'lastMutation', 'isLoading'])
+        ...mapState(['count', 'lastMutation', 'isLoading']),
+        ...mapGetters(['squareCount']),
     },
     
     methods: {

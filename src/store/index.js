@@ -37,5 +37,12 @@ export default createStore({
             commit('incrementBy', randomInt)
             commit('setLoading', false)
         }
+    },
+
+    // Son parecidas a las variables computadas
+    getters: {
+        squareCount(state) {
+            return state.count * state.count
+        }
     }
 })
