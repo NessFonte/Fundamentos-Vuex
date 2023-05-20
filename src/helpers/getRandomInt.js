@@ -5,7 +5,7 @@ const getRandomInt = () => {
         // Ejecutar el resolve 1seg después
         setTimeout(() => {
             resolve(rndInt)
-        }, 1000)
+        }, 2000)
     })
 }
 
